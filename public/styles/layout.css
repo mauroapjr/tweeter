@@ -14,12 +14,44 @@ html {
  * Global layout stuff
  */
 
-body {
+ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .container {
+  width: 100%;
+  margin-left: 2em;
+  padding-top: 150px;
+  margin-right: 100px;
+  
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.new-tweet {
+  display: flex;
+  align-content: flex-end;
+  padding-top: 150px;
+  font-style: italic;
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+} 
+
+.header { 
+  margin: 100px;
+  margin-top: 300px;
+}
+ 
+.tweeter-logo {
+  font-family: 'Bungee', cursive;
+  font-weight: 400;
+  color: #edf0f1;
+}
+
