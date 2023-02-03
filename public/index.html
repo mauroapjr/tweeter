@@ -53,20 +53,19 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      
       <section class="new-tweet">
         <div id="error-empty" class="error-message box">
-        <span>You must type something!</span>
-        <i class="fa-solid fa-triangle-exclamation"></i>
-      </div>
-      <div id="error-counter" class="error-message box">
-        <span>You went a bit further here. Go back to the limtit.</span>
-        <i class="fa-solid fa-triangle-exclamation"></i>
-      </div>
+          <span>You must type something!</span>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <div id="error-counter" class="error-message box">
+          <span>You went a bit further here. Go back to the limtit.</span>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
         <form id="formData" action="/tweets" method="POST">
           <label class="tweet-text" for="tweet-text">What are you humming about?</label>
-          <textarea id="tweet-text" name="text"></textarea>
-          <div class="tweet-bottom">
+            <textarea id="tweet-text" name="text"></textarea>
+              <div class="tweet-bottom">
             <button class="submit" type="submit">Tweet</button>
             <output class="counter" name="counter" for="tweet-text">140</output>
           </div>

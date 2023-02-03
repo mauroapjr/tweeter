@@ -1,9 +1,10 @@
 .header {
+  position: relative;
   width: 100%;
   height: 400px;
   background-color: #54514e;
   padding-top: 6em;
-  color:rgb(18, 1, 1);
+  color:rgb(84, 196, 166);
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -17,21 +18,22 @@
     width: 100%;
   }
   
-.box {
-  border: 3px solid rgb(74, 75, 74);
-  padding: 50px;
-  margin: 20px;
-}
+
 
 article.tweet-received header, article.tweet-received footer {
+  position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 article.tweet-received header div {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+
 }
   .text-received {
     display: flex;
@@ -71,11 +73,15 @@ article.tweet-received header div {
     opacity: .7;
     cursor: pointer;
 }
-
 .new-user {
   font-family: sans-serif;
   opacity: .6;
   
+}
+.box {
+    border: 3px solid rgb(74, 75, 74);
+  padding: 50px;
+  margin: 20px;
 }
 
 
