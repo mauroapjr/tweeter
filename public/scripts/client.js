@@ -38,7 +38,7 @@ $(document).ready(() => {
       type: "application/json",
       data: $(this).serialize(),
       success: function () {
-        $("textarea").val("");
+        $("textarea").val("");      
         $(".counter").val(0);
         $(".error_msg").hide();
         $.get("http://localhost:8080/tweets", (data) => {
