@@ -19,12 +19,40 @@ html {
   
   width: 100%;
   color: #545149;
-  background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
+  /* background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png); */
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   }
 
-  .container {
+  main {
+    /* width: 90%; */
+    height: 200px;
+    margin: 0 10% 2rem 10%;
+    background: #f4f1ec;
+  }
+  
+  .back-to-top {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background: blue;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+
+
+  /* .container {
+  display: flex;
   width: 100%;
   margin-left: 2em;
   padding-top: 150px;
@@ -51,7 +79,7 @@ html {
   height : 400px;
   width: 100%;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 120px;
@@ -63,5 +91,5 @@ html {
   font-weight: 400;
   color: #edf0f1;
   
-}
+} */
 

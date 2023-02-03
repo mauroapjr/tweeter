@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-component.css" type="text/css" /> 
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -31,49 +32,79 @@
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
-</head>
 
+</head>
 <body>
   <!-- Top nav bar (fixed) -->
-  <nav class="navbar">
-    <span class="tweeter-logo">tweeter</span>
-      <div class="write-a-new-tweet">
-        <span>Write a new Tweet</span>
-        <i class="fas fa-angle-double-down"></i>
+  <span class="back-to-top"><i class="fas fa-angle-double-up"></i></span> 
+  <nav>
+    <span>tweeter</span>
+      <div class="nav_new_tweet">
+        <p><span>Write</span> a new tweet</p>
+        <i class="fas fa-angle-double-down form-toggle"></i>
       </div>
-  </nav>
-  <div class="content">
-    <header class="header">
-      <div class="header-avatar">
-        <img src="/images/profile-hex.png">
-      </div>
+  </nav> 
+  <!-- <div class="content"> -->
+    <header>
+      <img class="bg_image" src="https://www.transparenttextures.com/patterns/asfalt-light.png" alt="" />
       <div>
-        <h2>Your Name</h2>
+        <img src="/images/profile-hex.png" />
       </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div id="error-empty" class="error-message box">
-          <span>You must type something!</span>
-          <i class="fa-solid fa-triangle-exclamation"></i>
+      <br />
+      <div class="avatar_name">
+        <h2><span>Amy</span> Mansell</h2>
+      </div>
+    </header> 
+
+  <!-- <header class="header">
+    <div class="header-avatar">
+      <img src="/images/profile-hex.png">
+    </div>
+    <div>
+      <h2>Your Name</h2>
+    </div>
+  </header> -->
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <!-- tweet form section -->
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form method="POST" action="/tweets">
+        <p class="error_msg"></p>
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea class="tweet-input" name="text" id="tweet-text"></textarea>
+        <div class="button-counter">
+          <button class="submit-tweet" type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text" id="btn">140</output>
         </div>
-        <div id="error-counter" class="error-message box">
-          <span>You went a bit further here. Go back to the limtit.</span>
-          <i class="fa-solid fa-triangle-exclamation"></i>
+      </form>
+    </section>
+    <!-- tweet component section -->
+    <section class="all-tweets-section" id="tweets-container"></section>
+  </main> 
+
+  <!-- <main class="container">
+    <section class="new-tweet">
+      <div id="error-empty" class="error-message box">
+        <span>You must type something!</span>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <div id="error-counter" class="error-message box">
+        <span>You went a bit further here. Go back to the limtit.</span>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <form id="formData" action="/tweets" method="POST">
+        <label class="tweet-text" for="tweet-text">What are you humming about?</label>
+        <textarea id="tweet-text" name="text"></textarea>
+        <div class="tweet-bottom">
+          <button class="submit" type="submit">Tweet</button>
+          <output class="counter" name="counter" for="tweet-text">140</output>
         </div>
-        <form id="formData" action="/tweets" method="POST">
-          <label class="tweet-text" for="tweet-text">What are you humming about?</label>
-            <textarea id="tweet-text" name="text"></textarea>
-              <div class="tweet-bottom">
-            <button class="submit" type="submit">Tweet</button>
-            <output class="counter" name="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section id="tweets-container"></section>
-    </main>
-  </div>
+      </form>
+    </section>
+    <section id="tweets-container"></section>
+  </main> -->
+  <!-- </div> -->
 </body>
 
 </html>
