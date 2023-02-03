@@ -14,12 +14,10 @@ $(document).ready(() => {
   const renderTweets = function (tweets) {
     tweets.forEach((tweet) => {
       const $newTweet = createTweetElement(tweet);
-
-      //console.log("this is the new tweet", $newTweet);
       $("#tweets-container").append($newTweet);
     });
   };
-
+  //submit the tweet posts
   $("form").on("submit", function (e) {
     e.preventDefault();
     $(this).find("p").hide().slideDown("slow");
@@ -49,40 +47,7 @@ $(document).ready(() => {
       },
     });
   });
-  // $("#formData").on("submit", function (evt) {
-  //   evt.preventDefault();
-
-  //   const formData = $(this).serialize();
-  //   const newPost = $("#tweet-text").val().length;
-
-  //   if (!newPost) {
-  //     $('#error-empty').removeAttr("display");
-  //     $('#error-empty').slideDown('slow');
-
-  //   } else if (newPost > 140) {
-  //     $('#error-counter').removeAttr("display");
-  //     $('#error-counter').slideDown('slow');
-
-  //   } else {
-  //     $('#error-empty').slideUp();
-  //     $('#error-counter').slideUp();
-
-  //     $.ajax({
-  //       url: "/tweets",
-  //       type: "POST",
-  //       data: formData,
-  //       success: function (response) {
-  //         $("#tweet-text").val("");
-  //         loadTweets();
-  //         console.log("It sent");
-  //       },
-  //       error: function (error) {
-  //         console.log("error");
-  //       },
-  //     });
-  //   }
-  // });
-
+  
   const loadTweets = function () {
     //console.log("consoleload");
     $.ajax("/tweets", { method: "GET" }).then(function (tweets) {
