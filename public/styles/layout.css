@@ -14,7 +14,7 @@ html {
  */
  body {
   width: 100%;
-  color: #545149;
+  /* color: #545149; */
   /* background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png); */
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -31,7 +31,7 @@ html {
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
-    background: blue;
+    background: #4056a1;
     position: fixed;
     bottom: 2rem;
     right: 2rem;
