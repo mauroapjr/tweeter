@@ -25,26 +25,7 @@ header > img {
 /* .avatar_name > h2 > span {
 }  */
 
-/* .header {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  background-color: #54514e;
-  padding-top: 6em;
-  color:rgb(84, 196, 166);
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: center;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  }
-  .header-avatar{
-    max-width:200px;
-  }
-  .header-avatar img {
-    width: 100%;
-  }
-  
+
 
 
 article.tweet-received header, article.tweet-received footer {
