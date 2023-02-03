@@ -28,14 +28,7 @@ header > img {
 
 
 
-article.tweet-received header, article.tweet-received footer {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  
-}
+
 
 article.tweet-received header div {
   display: flex;
