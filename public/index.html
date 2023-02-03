@@ -60,42 +60,18 @@
     <!-- tweet form section -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets">
-          <p class="error_msg"></p>
-            <label for="tweet-text">What are you humming about?</label>
-              <textarea class="tweet-input" name="text" id="tweet-text"></textarea>
-          <div class="button-counter">
-            <button class="submit-tweet" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text" id="btn">140</output>
-          </div>
-        </form>
+      <form method="POST" action="/tweets">
+        <p class="error_msg"></p>
+          <label for="tweet-text">What are you humming about?</label>
+            <textarea class="tweet-input" name="text" id="tweet-text"></textarea>
+              <div class="button-counter">
+                <button class="submit-tweet" type="submit">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text" id="btn">140</output>
+              </div>
+      </form>
     </section>
     <!-- tweet component section -->
     <section class="all-tweets-section" id="tweets-container"></section>
   </main> 
-
-  <!-- <main class="container">
-    <section class="new-tweet">
-      <div id="error-empty" class="error-message box">
-        <span>You must type something!</span>
-        <i class="fa-solid fa-triangle-exclamation"></i>
-      </div>
-      <div id="error-counter" class="error-message box">
-        <span>You went a bit further here. Go back to the limtit.</span>
-        <i class="fa-solid fa-triangle-exclamation"></i>
-      </div>
-      <form id="formData" action="/tweets" method="POST">
-        <label class="tweet-text" for="tweet-text">What are you humming about?</label>
-        <textarea id="tweet-text" name="text"></textarea>
-        <div class="tweet-bottom">
-          <button class="submit" type="submit">Tweet</button>
-          <output class="counter" name="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
-    <section id="tweets-container"></section>
-  </main> -->
-  <!-- </div> -->
 </body>
-
 </html>
