@@ -1,27 +1,94 @@
 .header {
   width: 100%;
   height: 400px;
-  background-color: #837f7c;
-  /* padding-top: 6em; */
+  background-color: #54514e;
+  padding-top: 6em;
   color:rgb(18, 1, 1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  
   }
-  
   .header-avatar{
     max-width:200px;
-    /* justify-content: center;
-    flex-direction: column; */
-    
   }
-  
   .header-avatar img {
     width: 100%;
-    
   }
   
+.box {
+  border: 3px solid rgb(74, 75, 74);
+  padding: 50px;
+  margin: 20px;
+}
+
+article.tweet-received header, article.tweet-received footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article.tweet-received header div {
+  display: flex;
+  align-items: center;
+}
+  .text-received {
+    display: flex;
+    width: 100%;
+    padding-top: 30px;
+    border-bottom: 3px solid rgb(74, 75, 74);
+    resize: none;
+
+  }
+  .avatar {
+    display: flex;
+    width: 100%;
+    color: dimgray;
+    padding-bottom: 10px;
+  }
+  .icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: baseline;
+    opacity: .7;
+    align-content: space-between;
+    gap: 10px;
+    gap: 10px 20px; 
+    row-gap: 10px;
+    column-gap: 20px;
+  }
+  .flag:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+  .retweet:hover {
+    opacity: .7;
+    cursor: pointer;
+  }
+  .like:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.new-user {
+  font-family: sans-serif;
+  opacity: .6;
+  
+}
+
+
+#error-empty {
+  display: none;
+  color: red;
+  font-family: sans-serif;
+  
+}
+
+#error-counter {
+  display: none;
+  color: red;
+  font-family: sans-serif;
+}
   

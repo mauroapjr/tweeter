@@ -21,10 +21,13 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -34,30 +37,33 @@
   <!-- Top nav bar (fixed) -->
   <nav class="navbar">
     <span class="tweeter-logo">tweeter</span>
-    <div class="write-a-new-tweet">
-      <span>Write a new Tweet</span>
-      <i class="fas fa-angle-double-down"></i>
-    </div>
+      <div class="write-a-new-tweet">
+        <span>Write a new Tweet</span>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
   </nav>
-
   <div class="content">
-
     <header class="header">
       <div class="header-avatar">
         <img src="/images/profile-hex.png">
       </div>
-
       <div>
         <h2>Your Name</h2>
       </div>
-
     </header>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
-    <div class="error" name="error-message"></div>
+      
       <section class="new-tweet">
-        <form>
+        <div id="error-empty" class="error-message box">
+        <span>You must type something!</span>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <div id="error-counter" class="error-message box">
+        <span>You went a bit further here. Go back to the limtit.</span>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+        <form id="formData" action="/tweets" method="POST">
           <label class="tweet-text" for="tweet-text">What are you humming about?</label>
           <textarea id="tweet-text" name="text"></textarea>
           <div class="tweet-bottom">
@@ -66,11 +72,9 @@
           </div>
         </form>
       </section>
-
-
+      <section id="tweets-container"></section>
     </main>
   </div>
-  
 </body>
 
 </html>

@@ -1,18 +1,15 @@
 .submit {
+  display: flex;
   font-family: 'Bungee', cursive;
   color: blue;
-  /* border-radius: 41px;
-  padding-top: 26;
-  padding-bottom: 26;
-  padding-left: 38;
-  padding-right: 38; */
-  
+  cursor: pointer;
 }
+
 .tweet-bottom {
   display: flex;
   justify-content: space-between;
+  border: 1px rgb(11, 11, 11);
 }
-
 
 .new-tweet {
   display: flex;
@@ -23,14 +20,14 @@
   
 }
 #tweet-text {
-  width: 100%;
+  width: 500px;
+  resize: none;
+  
 }
-
 .tweet-text {
   display: flex;
   background: transparent;
   border: none;
-  border-bottom: 5px solid grey;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 5px;
@@ -42,3 +39,10 @@
 .red {
   color: red;
 }
+
+
+/* .movie-container:hover {
+  box-shadow: 10px 10px 8px -10px rgba(0, 0, 0, 0.8);
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+} */

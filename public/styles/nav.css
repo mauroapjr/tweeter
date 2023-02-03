@@ -26,3 +26,16 @@
   align-items: center;
   justify-content: center;
   }
+  
+  #error-empty {
+    display: none;
+    color: red;
+    font-family: sans-serif;
+    justify-content: ;
+  }
+  
+  #error-counter {
+    display: none;
+    color: red;
+    font-family: sans-serif;
+  }

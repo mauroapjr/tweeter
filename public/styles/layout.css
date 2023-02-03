@@ -1,10 +1,11 @@
-/*
+/* 
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+ * Do not modify these two selectors, please */
+
 html {
   box-sizing: border-box;
+  
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -15,8 +16,10 @@ html {
  */
 
  body {
+  
+  width: 100%;
   color: #545149;
-  background-color: #f4f1ec;
+  background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   }
@@ -26,7 +29,7 @@ html {
   margin-left: 2em;
   padding-top: 150px;
   margin-right: 100px;
-  
+  border: 1px gray;
 }
 
 .new-tweet {
@@ -44,14 +47,21 @@ html {
 
 } 
 
-.header { 
-  margin: 100px;
-  margin-top: 300px;
-}
+.header {  
+  height : 400px;
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+
+} 
  
 .tweeter-logo {
   font-family: 'Bungee', cursive;
   font-weight: 400;
   color: #edf0f1;
+  
 }
 
