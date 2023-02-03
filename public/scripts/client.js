@@ -1,5 +1,6 @@
 let endpoint = "/tweets"; 
 
+//secure the code against hacks
 $(document).ready(() => {
   const escape = function (str) {
     let div = document.createElement("div");
@@ -10,13 +11,13 @@ $(document).ready(() => {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-
   const renderTweets = function (tweets) {
     tweets.forEach((tweet) => {
       const $newTweet = createTweetElement(tweet);
       $("#tweets-container").append($newTweet);
     });
   };
+
   //submit the tweet posts
   $("form").on("submit", function (e) {
     e.preventDefault();
@@ -86,13 +87,13 @@ $(document).ready(() => {
     `);
     return singleTweetElement;
   };
-  
+
   $(".new-tweet").hide();
 });
 
 // toggle tweet form
 const toggleTweetForm = () => {
-  var $section = $("section.new-tweet");
+  let $section = $("section.new-tweet");
   if ($section.is(":visible")) {
     $section.slideUp("fast");
   } else {
