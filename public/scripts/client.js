@@ -1,6 +1,6 @@
 let endpoint = "/tweets"; 
 
-//secure the code against hacks
+//secure the code against hacking
 $(document).ready(() => {
   const escape = function (str) {
     let div = document.createElement("div");
@@ -87,7 +87,6 @@ $(document).ready(() => {
     `);
     return singleTweetElement;
   };
-
   $(".new-tweet").hide();
 });
 
