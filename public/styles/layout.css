@@ -14,14 +14,12 @@ html {
  */
  body {
   width: 100%;
-  /* color: #545149; */
   background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
   }
 
   main {
-    /* width: 90%; */
     height: 200px;
     margin: 0 10% 2rem 10%;
   }
@@ -38,7 +36,6 @@ html {
     color: white;
     font-size: 2rem;
     font-weight: bold;
-    /* text-align: center; */
     display: flex;
     justify-content: center;
     align-items: center;
