@@ -1,18 +1,20 @@
 header {
-  background: rgba(90, 78, 10, 0.7);
+  /* /* background: rgba(43, 95, 227, 0.7); */
+  background-color: #02052c;
+  background-image: url("https://www.transparenttextures.com/patterns/shattered.png");
   height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 120px 0 0 0;
+  margin-top: 160px;
 }
 
 header > img {
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: -1;
@@ -22,6 +24,9 @@ header > img {
   color: white;
 }
 
+.profile {
+  margin: 10px 0;
+}
 /* .avatar_name > h2 > span {
 }  */
 
