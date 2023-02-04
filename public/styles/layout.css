@@ -12,11 +12,6 @@ html {
 /*
  * Global layout stuff
  */
-
- @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  
-}
-
  body {
   width: 100%;
   /* color: #545149; */
@@ -29,7 +24,6 @@ html {
     /* width: 90%; */
     height: 200px;
     margin: 0 10% 2rem 10%;
-    background: #f4f1ec;
   }
   
   .back-to-top {
@@ -49,7 +43,5 @@ html {
     justify-content: center;
     align-items: center;
   } 
-
-
 
   

@@ -14,6 +14,7 @@
   justify-content: space-between;
   margin: 2rem 0;
   padding: 0rem 1rem;
+  
 }
 
 .image-username {
@@ -47,6 +48,15 @@
 }
 
 .time-reactions i:hover {
-  color: #473e0f;
+  color: #40403f;
   cursor: pointer;
 } 
+
+@media only screen and (min-width: 1024px) {
+  .all-tweets-section {
+    border-left: 10px;
+    width: 33.3%;
+    line-height: 30px;
+  }
+  
+}

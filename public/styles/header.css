@@ -30,7 +30,11 @@ header > img {
 /* .avatar_name > h2 > span {
 }  */
 
-
-
+@media only screen and (min-width: 1024px) {
+  header {
+    width: 33.3%;
+    float: left;
+  }
+}
 
 

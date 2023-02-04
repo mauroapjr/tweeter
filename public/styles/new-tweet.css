@@ -37,3 +37,12 @@
   cursor: pointer;
   padding: 5px 15px;
 } 
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    flex-direction: ;
+    width: 60%;
+    
+
+  }
+}
