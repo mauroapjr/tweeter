@@ -14,7 +14,6 @@
   justify-content: space-between;
   margin: 2rem 0;
   padding: 0rem 1rem;
-  
 }
 
 .image-username {
@@ -35,7 +34,6 @@
   font-weight: bold;
   border-bottom: 2px solid black;
   word-break: break-all;
-  
 }
 
 .time-reactions {
@@ -61,5 +59,4 @@
     line-height: 30px;
     float: right;
   }
-  
 }
