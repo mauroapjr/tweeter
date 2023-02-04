@@ -48,27 +48,27 @@
   <!-- <div class="content"> -->
     <header>
       <img class="bg_image" src="https://www.transparenttextures.com/patterns/embossed-paper.png"> 
-      <div class="profile">
-        <img src="/images/profile-hex.png" />
-      </div>
-      <div class="avatar_name">
-        <h2><span>Mauro</span> Pereira</h2>
-      </div>
+        <div class="profile">
+          <img src="/images/profile-hex.png" />
+        </div>
+        <div class="avatar_name">
+          <h2><span>Mauro</span> Pereira</h2>
+        </div>
     </header> 
   <!-- Page-specific (main) content here -->
   <main class="container">
     <!-- tweet form section -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form method="POST" action="/tweets">
-        <p class="error_msg"></p>
-          <label for="tweet-text">What are you humming about?</label>
-            <textarea class="tweet-input" name="text" id="tweet-text"></textarea>
-              <div class="button-counter">
-                <button class="submit-tweet" type="submit">Tweet</button>
-                <output name="counter" class="counter" for="tweet-text" id="btn">140</output>
-              </div>
-      </form>
+        <form method="POST" action="/tweets">
+          <p class="error_msg"></p>
+            <label for="tweet-text">What are you humming about?</label>
+              <textarea class="tweet-input" name="text" id="tweet-text"></textarea>
+                <div class="button-counter">
+                  <button class="submit-tweet" type="submit">Tweet</button>
+                  <output name="counter" class="counter" for="tweet-text" id="btn">140</output>
+                </div>
+        </form>
     </section>
     <!-- tweet component section -->
     <section class="all-tweets-section" id="tweets-container"></section>
