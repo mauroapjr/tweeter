@@ -1,5 +1,4 @@
 .new-tweet {
-  /* background: yellow; */
   padding: 5px 0;
 }
 
@@ -11,6 +10,7 @@
 .new-tweet form {
   display: flex;
   flex-direction: column;
+  
 }
 
 .new-tweet form {
@@ -20,6 +20,7 @@
 .new-tweet form textarea {
   border: none;
   border-bottom: 2px solid black;
+  resize: none;
 }
 
 .button-counter {
@@ -45,9 +46,6 @@
     align-items: center;
     flex-direction: column;
     width: 60%;
-    
-    
-
   }
   .new-tweet form {
     margin-top: 100px;
