@@ -39,7 +39,6 @@ $(document).ready(function() {
         .next()
         .find("output")
         .text(charsLeft);
-      
     });
 
   // hide back to top button at initial render
