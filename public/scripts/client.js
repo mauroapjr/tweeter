@@ -1,34 +1,22 @@
-let endpoint = "/tweets"; 
+let endpoint = "/tweets";
 
-//secure the code against hacking
 $(document).ready(() => {
-  const escape = function (str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
-
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
   const renderTweets = function (tweets) {
     tweets.forEach((tweet) => {
       const $newTweet = createTweetElement(tweet);
-      $("#tweets-container").append($newTweet);
+      $("#tweets-container").prepend($newTweet);
     });
   };
 
-  //submit the tweet posts
   $("form").on("submit", function (e) {
     e.preventDefault();
     $(this).find("p").hide().slideDown("slow");
-    // if content is more than 140 characters
-    if ($(this).find("textarea").val().length > defaultCharsLeft) {
+    const characTextarea = $(this).find("textarea").val().length;
+    if (characTextarea > defaultCharsLeft) {
       const error_msg = "You cannot exceed more than 140 characters";
       return displayError(error_msg);
     }
-    // if content is empty
-    if ($(this).find("textarea").val().length < 1) {
+    if (characTextarea < 1) {
       const error_msg = "You cannot post an empty tweet.";
       return displayError(error_msg);
     }
@@ -38,21 +26,21 @@ $(document).ready(() => {
       type: "application/json",
       data: $(this).serialize(),
       success: function () {
-        $("textarea").val("");      
+        const apiAddress = "http://localhost:8080/tweets";
+        $("textarea").val("");
         $(".counter").val(0);
         $(".error_msg").hide();
-        $.get("http://localhost:8080/tweets", (data) => {
+        $.get(apiAddress, (data) => {
           const newTweet = [data.slice(-1).pop()];
           renderTweets(newTweet);
         });
       },
     });
   });
-  
+
   const loadTweets = function () {
     $.ajax("/tweets", { method: "GET" }).then(function (tweets) {
       renderTweets(tweets);
-      console.log("Success", tweets);
     });
   };
   loadTweets();
@@ -69,7 +57,7 @@ $(document).ready(() => {
         </div>
         <div>${user.handle}</div>
         </div>
-      <!-- tweet contect -->
+      <!-- tweet content -->
       <div class="tweet-content">
         <!-- <p>${content.text}</p> -->
         ${$("<p>").text(content.text).html()}
@@ -90,7 +78,6 @@ $(document).ready(() => {
   $(".new-tweet").hide();
 });
 
-// toggle tweet form
 const toggleTweetForm = () => {
   let $section = $("section.new-tweet");
   if ($section.is(":visible")) {
@@ -101,7 +88,6 @@ const toggleTweetForm = () => {
   }
 };
 
-// display errors
 const displayError = (err_msg) => {
   $("form").find(".error_msg").text(err_msg).show().slideDown("slow");
 };
